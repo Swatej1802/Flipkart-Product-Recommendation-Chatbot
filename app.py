@@ -67,6 +67,35 @@ def create_app():
         if not user_input:
             return "No message received", 400
 
+        # Convert to lowercase for greeting check
+        cleaned_input = user_input.lower().strip()
+
+        # Greeting handling
+        greetings = [
+            "hi",
+            "hello",
+            "hey",
+            "hii",
+            "good morning",
+            "good evening",
+            "good afternoon"
+        ]
+
+        if cleaned_input in greetings:
+
+            return (
+                "Hello 👋\n\n"
+                "Welcome to Flipkart Chatbot!\n\n"
+                "I can help you with:\n"
+                "• Product recommendations\n"
+                "• Product reviews\n"
+                "• Budget shopping suggestions\n"
+                "• Product comparisons\n"
+                "• General queries\n\n"
+                "Try asking:\n"
+                "'Best earbuds under 2000'"
+            )
+
         try:
 
             # Invoke RetrievalQA chain

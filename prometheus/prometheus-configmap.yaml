@@ -16,4 +16,4 @@ data:
       - job_name: 'flask-app'
         metrics_path: /metrics
         static_configs:
-          - targets: ['35.232.34.39:5000']
+          - targets: ['35.254.71.180:5000']
